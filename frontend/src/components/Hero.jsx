@@ -1,37 +1,40 @@
-import {assets} from '../assets/assets'
+import { assets } from '../assets/assets';
 
 const Hero = () => {
   return (
-    <div className='flex flex-col sm:flex-row border border-gray-400'>
-    {/* hero left side */}
-     <div className='w-full sm:w-1/2 flex items-center justify-center py-10 sm:py-0'>
-     <div className='text-[#414141]'>
-        <div className='flex items-center gap-2'>
-            <p className='w-8 md:w-11 h-[2px] bg-[#414141]'>
-
-            </p>
-            <p className='font-medium text-sm md:text-base'>
-              OUR BESTSSELLERS
-            </p>
+    <section className="flex flex-col-reverse sm:flex-row items-center justify-between bg-white border border-gray-300 rounded-xl overflow-hidden shadow-md">
+      
+      {/* Hero Left Side */}
+      <div className="w-full sm:w-1/2 px-6 sm:px-12 py-10 flex flex-col justify-center text-center sm:text-left">
+        <div className="flex items-center justify-center sm:justify-start gap-2 mb-4">
+          <div className="w-10 h-[2px] bg-gray-800"></div>
+          <span className="text-gray-700 text-sm md:text-base font-medium tracking-wide">
+            OUR BESTSELLERS
+          </span>
         </div>
-        <h1 className='text-3xl sm:py-3 lg:text-5xl leading-relaxed '>
-       Latest Arrivals
+
+        <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 leading-snug">
+          Latest Arrivals
         </h1>
-        <div className='flex items-center gap-2'>
-          <p className='font-semibold text-sm md:text-base'>
+
+        <div className="flex items-center justify-center sm:justify-start gap-2 mt-6 group cursor-pointer">
+          <span className="text-base md:text-lg font-semibold text-gray-800 transition group-hover:text-black">
             Shop Now
-          </p>
-          <p className='w-8 md:w-11 h-[1px] bg-[#414141]'>
-          </p>
-
+          </span>
+          <div className="w-8 md:w-11 h-[1px] bg-gray-800 transition-all duration-300 group-hover:w-14"></div>
         </div>
-     </div>
+      </div>
 
-     </div>
-     {/* hero right side */}
-     <img className='w-full sm:w-1/2' src={assets.hero_img} alt='' />
-    </div>
-  )
-}
+      {/* Hero Right Side */}
+      <div className="w-full sm:w-1/2">
+        <img
+          src={assets.hero_img}
+          alt="Hero"
+          className="w-full h-auto object-cover transition duration-500 hover:scale-105"
+        />
+      </div>
+    </section>
+  );
+};
 
-export default Hero
+export default Hero;
